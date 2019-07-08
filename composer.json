@@ -1,0 +1,36 @@
+{
+  "name": "wodrow/yii2wtxtcrawler",
+  "description": "txt crawler",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "extension",
+    "ajax",
+    "crud",
+    "gii",
+    "template",
+    "database"
+  ],
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "wodrow",
+      "email": "wodrow451611cv@gmail.com",
+      "homepage": "https://github.com/wodrow?tab=repositories"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/wodrow/yii2wtxtcrawler/issues?state=open",
+    "source": "https://github.com/wodrow/yii2wtxtcrawler"
+  },
+  "require": {
+    "yiisoft/yii2": "^2.0.19",
+    "jaeger/querylist": "^4.1.1",
+    "wodrow/yii2wtools": "^0.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "wodrow\\wtxtcrawler\\": "src/"
+    }
+  }
+}
