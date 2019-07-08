@@ -19,7 +19,7 @@
     "source": "https://github.com/wodrow/yii2wtxtcrawler"
   },
   "require": {
-    "yiisoft/yii2": "^2.0.19",
+    "yiisoft/yii2": "^2.0.17",
     "jaeger/querylist": "^4.1.1",
     "wodrow/yii2wtools": "^0.1.0"
   },
