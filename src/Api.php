@@ -11,5 +11,5 @@ namespace wodrow\yii2wtxtcrawler;
 
 interface Api
 {
-
+//    public function getTitle();
 }
