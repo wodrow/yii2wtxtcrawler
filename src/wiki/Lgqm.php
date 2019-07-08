@@ -14,4 +14,20 @@ use wodrow\yii2wtxtcrawler\Tc;
 class Lgqm extends Tc
 {
     const NAME = "临高启明wiki";
+    const DOMAIN = "lgqm.huijiwiki.com";
+    const HOME_URL = "http://lgqm.huijiwiki.com/wiki/首页";
+
+    /**
+     * @return array|mixed
+     */
+    public function crawler()
+    {
+        $ql = $this->ql->get($this->url);
+        $this->title = $ql->find('title')->text();
+        $this->content = $ql->find("div.textIndent")->text();
+        return [
+            'title' => $this->title,
+            'content' => $this->content,
+        ];
+    }
 }

@@ -8,8 +8,15 @@
 
 namespace wodrow\yii2wtxtcrawler;
 
-
+/**
+ * Interface Api
+ * @package wodrow\yii2wtxtcrawler
+ */
 interface Api
 {
-//    public function getTitle();
+    /**
+     * 爬取
+     * @return mixed
+     */
+    public function crawler();
 }

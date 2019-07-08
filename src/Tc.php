@@ -9,10 +9,45 @@
 namespace wodrow\yii2wtxtcrawler;
 
 
+use QL\QueryList;
 use yii\base\Component;
+use yii\helpers\FileHelper;
 
 abstract class Tc extends Component implements Api
 {
+    public $url;
+    public $title;
+    public $content = "";
+
+    public $t_dir;
+
+    /**
+     * @var QueryList $ql
+     */
+    public $ql;
+
+    public function init()
+    {
+        parent::init();
+        $this->ql = QueryList::getInstance();
+    }
+
+    /**
+     * 生成txt
+     * @throws
+     */
+    public function generate()
+    {
+        $this->t_dir = \Yii::getAlias($this->t_dir);
+        if (!is_dir($this->t_dir)){
+            FileHelper::createDirectory($this->t_dir);
+        }
+        $f_p = $this->t_dir."/{$this->title}";
+        if (!file_exists($f_p)){
+            file_put_contents($f_p, $this->content);
+        }
+    }
+
     /**
      * 获取url的域名
      * @param string $url
@@ -20,7 +55,7 @@ abstract class Tc extends Component implements Api
      */
     public static function getDomain($url)
     {
-        preg_match('/[\w+]\:\/\/([^/\]+)/isU', $url, $domain);
-        return $domain[0];
+        preg_match('/[\w]+\:\/\/([^\/]+)[\S]+/', $url, $domain);
+        return $domain[1];
     }
 }
