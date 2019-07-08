@@ -9,6 +9,7 @@
 namespace wodrow\yii2wtxtcrawler;
 
 
+use wodrow\yii2wtxtcrawler\site\Txt68;
 use wodrow\yii2wtxtcrawler\site\Xbqg;
 use wodrow\yii2wtxtcrawler\site\Xbqg6;
 use wodrow\yii2wtxtcrawler\wiki\Lgqm;
@@ -42,6 +43,9 @@ class TxtCrawler
                 break;
             case Xbqg6::DOMAIN:
                 $this->tc = new Xbqg6();
+                break;
+            case Txt68::DOMAIN:
+                $this->tc = new Txt68();
                 break;
             default:
                 throw new Exception("没有找到该域名的解析组件");
