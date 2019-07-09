@@ -20,6 +20,7 @@ abstract class Tc extends Component implements Api
     public $content = "";
 
     public $t_dir;
+    public $show_log;
 
     /**
      * @var QueryList $ql
@@ -42,7 +43,7 @@ abstract class Tc extends Component implements Api
         if (!is_dir($this->t_dir)){
             FileHelper::createDirectory($this->t_dir);
         }
-        $f_p = $this->t_dir."/{$this->title}";
+        $f_p = $this->t_dir."/{$this->title}.txt";
         if (!file_exists($f_p)){
             file_put_contents($f_p, $this->content);
         }

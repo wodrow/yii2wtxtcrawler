@@ -9,6 +9,7 @@
 namespace wodrow\yii2wtxtcrawler;
 
 
+use wodrow\yii2wtxtcrawler\site\BqgInfo;
 use wodrow\yii2wtxtcrawler\site\Txt68;
 use wodrow\yii2wtxtcrawler\site\Xbqg;
 use wodrow\yii2wtxtcrawler\site\Xbqg6;
@@ -24,6 +25,20 @@ class TxtCrawler
 
     public $t_dir = "@runtime/txt";
     public $generate = 0;
+    public $is_inconsole = 0;
+    public $show_log = 0;
+    public $url;
+
+    public function getTcs()
+    {
+        return [
+            Lgqm::DOMAIN => Lgqm::class,
+            BqgInfo::DOMAIN => BqgInfo::class,
+            Xbqg::DOMAIN => Xbqg::class,
+            Xbqg6::DOMAIN => Xbqg6::class,
+            Txt68::DOMAIN => Txt68::class,
+        ];
+    }
 
     /**
      * @param $url
@@ -31,27 +46,26 @@ class TxtCrawler
      * @return array
      * @throws
      */
-    public function makeTxt($url)
+    public function makeTxt()
     {
-        $domain = Tc::getDomain($url);
-        switch ($domain){
-            case Lgqm::DOMAIN:
-                $this->tc = new Lgqm();
-                break;
-            case Xbqg::DOMAIN:
-                $this->tc = new Xbqg();
-                break;
-            case Xbqg6::DOMAIN:
-                $this->tc = new Xbqg6();
-                break;
-            case Txt68::DOMAIN:
-                $this->tc = new Txt68();
-                break;
-            default:
-                throw new Exception("没有找到该域名的解析组件");
-                break;
+        if (!$this->url){
+            throw new Exception("url must");
         }
-        $this->tc->url = $url;
+        if ($this->is_inconsole){
+            $this->show_log = 1;
+        }
+        $domain = Tc::getDomain($this->url);
+        $tcs = $this->getTcs();
+        if (!in_array($domain, array_flip($tcs))){
+            throw new Exception("没有找到该域名的解析组件");
+        }
+        foreach ($tcs as $k => $v){
+            if ($domain == $k){
+                $this->tc = new $v;
+            }
+        }
+        $this->tc->url = $this->url;
+        $this->tc->show_log = $this->show_log;
         $data = $this->tc->crawler();
         if ($this->generate){
             $this->tc->t_dir = $this->t_dir;

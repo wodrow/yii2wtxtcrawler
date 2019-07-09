@@ -31,11 +31,11 @@ class Xbqg extends Tc
         ])->queryData();
         $this->content = "";
         foreach ($list as $k => $v){
-            $this->content .= $v['title']."\r";
+            $this->content .= $v['title']."\r\n";
             $_ql = QueryList::getInstance()->get("http://".self::DOMAIN.$v['href']);
             $eles = $_ql->find('#content');
             $eles->find('p:last')->remove();
-            $this->content .= $eles->text()."\r";
+            $this->content .= $eles->text()."\r\n";
         }
         return [
             'title' => $this->title,
