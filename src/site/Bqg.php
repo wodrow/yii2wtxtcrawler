@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: wodrow
  * Date: 19-7-9
- * Time: 上午8:50
+ * Time: 上午10:49
  */
 
 namespace wodrow\yii2wtxtcrawler\site;
@@ -12,11 +12,11 @@ namespace wodrow\yii2wtxtcrawler\site;
 use QL\QueryList;
 use wodrow\yii2wtxtcrawler\Tc;
 
-class BqgInfo extends Tc
+class Bqg extends Tc
 {
     const NAME = "笔趣阁";
-    const DOMAIN = "www.biquge.info";
-    const HOME_URL = "https://www.biquge.info/";
+    const DOMAIN = "www.biquke.com";
+    const HOME_URL = "https://www.biquke.com/";
 
     public function crawler()
     {

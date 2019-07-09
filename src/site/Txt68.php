@@ -31,11 +31,11 @@ class Txt68 extends Tc
             ->queryData();
         $this->content = "";
         foreach ($list as $k => $v){
-            $this->content .= iconv('GBK','UTF-8',$v['title'])."\r\n";
+            $this->content .= iconv('GBK','UTF-8',$v['title'])."\r\n\n";
             $_ql = QueryList::getInstance()->get($v['href']);
             $eles = $_ql->find('#content');
             $eles->find('p:last')->remove();
-            $this->content .= $eles->text()."\r\n";
+            $this->content .= $eles->text()."\r\n\n";
         }
         return [
             'title' => $this->title,
