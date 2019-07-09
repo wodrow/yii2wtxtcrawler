@@ -12,7 +12,7 @@ namespace wodrow\yii2wtxtcrawler\site;
 use QL\QueryList;
 use wodrow\yii2wtxtcrawler\Tc;
 
-class Bqg extends Tc
+class Bqk extends Tc
 {
     const NAME = "笔趣阁";
     const DOMAIN = "www.biquke.com";
