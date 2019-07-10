@@ -26,6 +26,7 @@ use wodrow\yii2wtxtcrawler\site\ThirdZm;
 use wodrow\yii2wtxtcrawler\site\Txt68;
 use wodrow\yii2wtxtcrawler\site\Xbqg;
 use wodrow\yii2wtxtcrawler\site\Xbqg6;
+use wodrow\yii2wtxtcrawler\site\XiaoShuoShuWang;
 use wodrow\yii2wtxtcrawler\wiki\Lgqm;
 use yii\base\Exception;
 
@@ -63,6 +64,7 @@ class TxtCrawler
             BiQuGerXiaoShuo::DOMAIN => BiQuGerXiaoShuo::class,
 //            QuanXiaoShuo::DOMAIN => QuanXiaoShuo::class,
             BaBaiXiaoSHuoWang::DOMAIN => BaBaiXiaoSHuoWang::class,
+            XiaoShuoShuWang::DOMAIN => XiaoShuoShuWang::class,
         ];
     }
 
