@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: wodrow
  * Date: 19-7-10
- * Time: 下午2:37
+ * Time: 下午2:41
  */
 
 namespace wodrow\yii2wtxtcrawler\site;
@@ -11,11 +11,11 @@ namespace wodrow\yii2wtxtcrawler\site;
 
 use wodrow\yii2wtxtcrawler\Tc;
 
-class DuShuWang66 extends Tc
+class LieWenWang extends Tc
 {
-    const NAME = "读书网66";
-    const DOMAIN = "www.dushu66.com";
-    const HOME_URL = "https://www.dushu66.com/";
+    const NAME = "猎文网";
+    const DOMAIN = "www.liewen.cc";
+    const HOME_URL = "https://www.liewen.cc/";
 
     public function crawler()
     {
@@ -29,7 +29,7 @@ class DuShuWang66 extends Tc
         $this->content = "";
         foreach ($list as $k => $v) {
             $title = $v['title'];
-//            $title = mb_convert_encoding($title, 'UTF-8', 'GBK');
+            $title = mb_convert_encoding($title, 'UTF-8', 'GBK');
             $this->content .= $title . "\r\n\n";
             $this->ql->get("https://" . self::DOMAIN . $v['href']);
             $eles = $this->ql->find('#content');
