@@ -11,6 +11,7 @@ namespace wodrow\yii2wtxtcrawler;
 
 use wodrow\yii2wtxtcrawler\site\Bqk;
 use wodrow\yii2wtxtcrawler\site\BqgInfo;
+use wodrow\yii2wtxtcrawler\site\Ddxs;
 use wodrow\yii2wtxtcrawler\site\ThirdZm;
 use wodrow\yii2wtxtcrawler\site\Txt68;
 use wodrow\yii2wtxtcrawler\site\Xbqg;
@@ -41,6 +42,7 @@ class TxtCrawler
             Xbqg6::DOMAIN => Xbqg6::class,
             Txt68::DOMAIN => Txt68::class,
             ThirdZm::DOMAIN => ThirdZm::class,
+            Ddxs::DOMAIN => Ddxs::class,
         ];
     }
 
