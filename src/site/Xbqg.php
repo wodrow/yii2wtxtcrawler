@@ -25,17 +25,22 @@ class Xbqg extends Tc
     {
         $ql = $this->ql->get($this->url);
         $this->title = $ql->find('title')->text();
+        if ($this->show_log)var_dump($this->title);
         $list = $ql->rules([
             'title' => ['#list a', 'text'],
             'href' => ['#list a', 'href'],
         ])->queryData();
         $this->content = "";
         foreach ($list as $k => $v){
-            $this->content .= $v['title']."\r\n\n";
+            $title = $v['title'];
+            $this->content .= $title."\r\n\n";
             $_ql = QueryList::getInstance()->get("http://".self::DOMAIN.$v['href']);
             $eles = $_ql->find('#content');
             $eles->find('p:last')->remove();
             $this->content .= $eles->text()."\r\n\n";
+            if ($this->show_log){
+                var_dump($title);
+            }
         }
         return [
             'title' => $this->title,

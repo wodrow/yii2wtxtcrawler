@@ -22,6 +22,7 @@ class Txt68 extends Tc
     {
         $ql = $this->ql->get($this->url);
         $this->title = $ql->find('title')->text();
+        if ($this->show_log)var_dump($this->title);
         $list = $ql->rules([
             'title' => ['.chapterSo>.chapterNum li>a', 'text'],
             'href' => ['.chapterSo>.chapterNum li>a', 'href'],
@@ -31,11 +32,16 @@ class Txt68 extends Tc
             ->queryData();
         $this->content = "";
         foreach ($list as $k => $v){
-            $this->content .= iconv('GBK','UTF-8',$v['title'])."\r\n\n";
+            $title = $v['title'];
+            $title = iconv('GBK','UTF-8',$title);
+            $this->content .= $title."\r\n\n";
             $_ql = QueryList::getInstance()->get($v['href']);
             $eles = $_ql->find('#content');
             $eles->find('p:last')->remove();
             $this->content .= $eles->text()."\r\n\n";
+            if ($this->show_log){
+                var_dump($title);
+            }
         }
         return [
             'title' => $this->title,

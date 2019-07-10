@@ -2,40 +2,37 @@
 /**
  * Created by PhpStorm.
  * User: wodrow
- * Date: 19-7-8
- * Time: 下午6:41
+ * Date: 19-7-10
+ * Time: 上午8:58
  */
 
 namespace wodrow\yii2wtxtcrawler\site;
 
 
-use QL\QueryList;
 use wodrow\yii2wtxtcrawler\Tc;
 
-class Xbqg6 extends Tc
+class ThirdZm extends Tc
 {
-    const NAME = "新笔趣阁6";
-    const DOMAIN = "www.xbiquge6.com";
-    const HOME_URL = "https://www.xbiquge6.com/";
+    const NAME = "三掌门";
+    const DOMAIN = "www.3zm.la";
+    const HOME_URL = "https://www.3zm.la/";
 
-    /**
-     * @return array|mixed
-     */
     public function crawler()
     {
-        $ql = $this->ql->get($this->url);
-        $this->title = $ql->find('title')->text();
+        $this->ql->get($this->url);
+        $this->title = $this->ql->find('title')->text();
         if ($this->show_log)var_dump($this->title);
-        $list = $ql->rules([
-            'title' => ['#list a', 'text'],
-            'href' => ['#list a', 'href'],
+        $list = $this->ql->rules([
+            'title' => ['.listmain a', 'text'],
+            'href' => ['.listmain a', 'href'],
         ])->queryData();
         $this->content = "";
         foreach ($list as $k => $v){
             $title = $v['title'];
+            $title = mb_convert_encoding($title, 'UTF-8', 'GBK');
             $this->content .= $title."\r\n\n";
-            $_ql = QueryList::getInstance()->get("http://".self::DOMAIN.$v['href']);
-            $eles = $_ql->find('#content');
+            $this->ql->get("http://".self::DOMAIN.$v['href']);
+            $eles = $this->ql->find('#content');
             $eles->find('p:last')->remove();
             $this->content .= $eles->text()."\r\n\n";
             if ($this->show_log){
