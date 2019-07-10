@@ -9,10 +9,12 @@
 namespace wodrow\yii2wtxtcrawler;
 
 
+use wodrow\yii2wtxtcrawler\site\AiDouKanShu;
 use wodrow\yii2wtxtcrawler\site\Biquger;
 use wodrow\yii2wtxtcrawler\site\Bqk;
 use wodrow\yii2wtxtcrawler\site\BqgInfo;
 use wodrow\yii2wtxtcrawler\site\Ddxs;
+use wodrow\yii2wtxtcrawler\site\QuanShuWang;
 use wodrow\yii2wtxtcrawler\site\ThirdZm;
 use wodrow\yii2wtxtcrawler\site\Txt68;
 use wodrow\yii2wtxtcrawler\site\Xbqg;
@@ -45,6 +47,8 @@ class TxtCrawler
             Txt68::DOMAIN => Txt68::class,
             ThirdZm::DOMAIN => ThirdZm::class,
             Ddxs::DOMAIN => Ddxs::class,
+            AiDouKanShu::DOMAIN => AiDouKanShu::class,
+            QuanShuWang::DOMAIN => QuanShuWang::class,
         ];
     }
 

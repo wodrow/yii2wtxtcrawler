@@ -31,7 +31,7 @@ class ThirdZm extends Tc
             $title = $v['title'];
             $title = mb_convert_encoding($title, 'UTF-8', 'GBK');
             $this->content .= $title."\r\n\n";
-            $this->ql->get("http://".self::DOMAIN.$v['href']);
+            $this->ql->get("https://".self::DOMAIN.$v['href']);
             $eles = $this->ql->find('#content');
             $eles->find('p:last')->remove();
             $this->content .= $eles->text()."\r\n\n";
