@@ -9,6 +9,7 @@
 namespace wodrow\yii2wtxtcrawler;
 
 
+use wodrow\yii2wtxtcrawler\site\Biquger;
 use wodrow\yii2wtxtcrawler\site\Bqk;
 use wodrow\yii2wtxtcrawler\site\BqgInfo;
 use wodrow\yii2wtxtcrawler\site\Ddxs;
@@ -36,6 +37,7 @@ class TxtCrawler
     {
         return [
             Lgqm::DOMAIN => Lgqm::class,
+            Biquger::DOMAIN => Biquger::class,
             Bqk::DOMAIN => Bqk::class,
             BqgInfo::DOMAIN => BqgInfo::class,
             Xbqg::DOMAIN => Xbqg::class,
