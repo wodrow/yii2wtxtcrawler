@@ -12,6 +12,7 @@ namespace wodrow\yii2wtxtcrawler;
 use wodrow\yii2wtxtcrawler\site\AiDouKanShu;
 use wodrow\yii2wtxtcrawler\site\BaLingDianZiShuo;
 use wodrow\yii2wtxtcrawler\site\Biquger;
+use wodrow\yii2wtxtcrawler\site\BiQuGerXiaoShuo;
 use wodrow\yii2wtxtcrawler\site\BiXiaWenXue;
 use wodrow\yii2wtxtcrawler\site\Bqk;
 use wodrow\yii2wtxtcrawler\site\BqgInfo;
@@ -55,6 +56,7 @@ class TxtCrawler
             QuanBenXiaoShuoWang::DOMAIN => QuanBenXiaoShuoWang::class,
             BaLingDianZiShuo::DOMAIN => BaLingDianZiShuo::class,
             BiXiaWenXue::DOMAIN => BiXiaWenXue::class,
+            BiQuGerXiaoShuo::DOMAIN => BiQuGerXiaoShuo::class,
         ];
     }
 
