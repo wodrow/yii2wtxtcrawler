@@ -21,6 +21,7 @@ use wodrow\yii2wtxtcrawler\site\Ddxs;
 use wodrow\yii2wtxtcrawler\site\QuanBenXiaoShuoWang;
 use wodrow\yii2wtxtcrawler\site\QuanShuWang;
 use wodrow\yii2wtxtcrawler\site\QuanShuWang4;
+use wodrow\yii2wtxtcrawler\site\QuanXiaoShuo;
 use wodrow\yii2wtxtcrawler\site\ThirdZm;
 use wodrow\yii2wtxtcrawler\site\Txt68;
 use wodrow\yii2wtxtcrawler\site\Xbqg;
@@ -60,6 +61,7 @@ class TxtCrawler
             BaLingDianZiShuo::DOMAIN => BaLingDianZiShuo::class,
             BiXiaWenXue::DOMAIN => BiXiaWenXue::class,
             BiQuGerXiaoShuo::DOMAIN => BiQuGerXiaoShuo::class,
+//            QuanXiaoShuo::DOMAIN => QuanXiaoShuo::class,
             BaBaiXiaoSHuoWang::DOMAIN => BaBaiXiaoSHuoWang::class,
         ];
     }
