@@ -15,7 +15,7 @@ class BaBaiXiaoSHuoWang extends Tc
 {
     const NAME = "800小说网";
     const DOMAIN = "www.800txt.net";
-    const HOME_URL = "https://www.800txt.net/";
+        const HOME_URL = "https://www.800txt.net/";
 
     public function crawler()
     {
