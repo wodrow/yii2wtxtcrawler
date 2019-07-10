@@ -21,6 +21,7 @@ use wodrow\yii2wtxtcrawler\site\Bqk;
 use wodrow\yii2wtxtcrawler\site\BqgInfo;
 use wodrow\yii2wtxtcrawler\site\Ddxs;
 use wodrow\yii2wtxtcrawler\site\DuShuWang66;
+use wodrow\yii2wtxtcrawler\site\KanShuLa;
 use wodrow\yii2wtxtcrawler\site\KBiQuGe;
 use wodrow\yii2wtxtcrawler\site\LieWenWang;
 use wodrow\yii2wtxtcrawler\site\QuanBenXiaoShuoWang;
@@ -77,6 +78,7 @@ class TxtCrawler
             KBiQuGe::DOMAIN => KBiQuGe::class,
             DuShuWang66::DOMAIN => DuShuWang66::class,
             LieWenWang::DOMAIN => LieWenWang::class,
+            KanShuLa::DOMAIN => KanShuLa::class,
         ];
     }
 
