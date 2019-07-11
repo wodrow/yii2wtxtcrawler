@@ -49,7 +49,6 @@ class TxtCrawler
     public $is_inconsole = 0;
     public $show_log = 0;
     public $url;
-    public $phantomjs = '@vendor/wodrow/yii2wtxtcrawler/src/bin/phantomjs';
 
     public function getTcs()
     {
@@ -83,26 +82,6 @@ class TxtCrawler
         ];
     }
 
-    public function selPhantomjs()
-    {
-        if (PHP_OS != 'Linux'){
-            $this->phantomjs = '@vendor/wodrow/yii2wtxtcrawler/src/bin/phantomjs.exe';
-        }
-        $this->phantomjs = \Yii::getAlias($this->phantomjs);
-//        $chmod = substr(base_convert(fileperms($this->phantomjs), 10, 8), 3);
-//        var_dump($chmod);
-//        var_dump(file_exists($this->phantomjs));
-//        var_dump(is_executable($this->phantomjs));
-//        exit;
-        if (!file_exists($this->phantomjs)){
-            throw new Exception($this->phantomjs." is not exist!");
-        }
-        if (!is_executable($this->phantomjs)){
-            throw new Exception($this->phantomjs." is not executable! place set executable for the file");
-        }
-        $this->tc->phantomjs = $this->phantomjs;
-    }
-
     /**
      * @return array
      * @throws
@@ -127,8 +106,6 @@ class TxtCrawler
         }
         $this->tc->url = $this->url;
         $this->tc->show_log = $this->show_log;
-        $this->selPhantomjs();
-        $this->tc->initBrowser();
         $data = $this->tc->crawler();
         if ($this->generate){
             $this->tc->t_dir = $this->t_dir;
