@@ -41,7 +41,6 @@ class QuanXiaoShuo extends Tc
 //                var_dump($eles->text());
             }
         }
-        exit;
         return [
             'title' => $this->title,
             'content' => $this->content,
