@@ -12,6 +12,7 @@ namespace wodrow\yii2wtxtcrawler;
 use QL\QueryList;
 use QL\Ext\PhantomJs;
 use yii\base\Component;
+use yii\base\Exception;
 use yii\helpers\FileHelper;
 
 abstract class Tc extends Component implements Api
@@ -19,6 +20,7 @@ abstract class Tc extends Component implements Api
     public $url;
     public $title;
     public $content = "";
+    public $phantomjs;
 
     public $t_dir;
     public $show_log;
@@ -32,9 +34,16 @@ abstract class Tc extends Component implements Api
     {
         parent::init();
         $this->ql = QueryList::getInstance();
-//        $this->ql->use(PhantomJs::class, '/usr/bin/phantomjs', 'browser');
+    }
+
+    public function initBrowser()
+    {
+//        $this->ql->use(PhantomJs::class, $this->>phantomjs, 'browser');
+        $this->ql->use(PhantomJs::class, $this->phantomjs);
 //        $html = $this->ql->browser('https://m.toutiao.com')->getHtml();
 //        var_dump($html);
+//        $data = $this->ql->browser('https://m.toutiao.com')->find('p')->texts();
+//        print_r($data->all());
 //        exit;
     }
 

@@ -19,7 +19,7 @@ class QuanXiaoShuo extends Tc
 
     public function crawler()
     {
-        $this->ql->get($this->url);
+        $this->ql->browser($this->url);
         $this->title = $this->ql->find('title')->text();
         if ($this->show_log)var_dump($this->title);
         $ls = '.chapter a';
@@ -30,7 +30,7 @@ class QuanXiaoShuo extends Tc
         $this->content = "";
         foreach ($list as $k => $v){
             $title = $v['title'];
-            $title = mb_convert_encoding($title, 'UTF-8', 'GBK');
+//            $title = mb_convert_encoding($title, 'UTF-8', 'GBK');
             $this->content .= $title."\r\n\n";
             $this->ql->get("https://".self::DOMAIN.$v['href']);
             $eles = $this->ql->find('#content');
@@ -41,6 +41,7 @@ class QuanXiaoShuo extends Tc
 //                var_dump($eles->text());
             }
         }
+        exit;
         return [
             'title' => $this->title,
             'content' => $this->content,
