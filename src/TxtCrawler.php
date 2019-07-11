@@ -13,6 +13,7 @@ use wodrow\yii2wtxtcrawler\site\AiDouKanShu;
 use wodrow\yii2wtxtcrawler\site\BaBaiXiaoSHuoWang;
 use wodrow\yii2wtxtcrawler\site\BaLingDianZiShuo;
 use wodrow\yii2wtxtcrawler\site\Biquger;
+use wodrow\yii2wtxtcrawler\site\Biquger001;
 use wodrow\yii2wtxtcrawler\site\BiQuGerXiaoShuo;
 use wodrow\yii2wtxtcrawler\site\BiQuKan;
 use wodrow\yii2wtxtcrawler\site\BiQuWo;
@@ -55,6 +56,7 @@ class TxtCrawler
         return [
             Lgqm::DOMAIN => Lgqm::class,
             Biquger::DOMAIN => Biquger::class,
+            Biquger001::DOMAIN => Biquger001::class,
             Bqk::DOMAIN => Bqk::class,
             BqgInfo::DOMAIN => BqgInfo::class,
             Xbqg::DOMAIN => Xbqg::class,
