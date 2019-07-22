@@ -22,6 +22,7 @@ use wodrow\yii2wtxtcrawler\site\Bqk;
 use wodrow\yii2wtxtcrawler\site\BqgInfo;
 use wodrow\yii2wtxtcrawler\site\Ddxs;
 use wodrow\yii2wtxtcrawler\site\DuShuWang66;
+use wodrow\yii2wtxtcrawler\site\HuaWenZaiXian;
 use wodrow\yii2wtxtcrawler\site\KanShuLa;
 use wodrow\yii2wtxtcrawler\site\KBiQuGe;
 use wodrow\yii2wtxtcrawler\site\LieWenWang;
@@ -35,6 +36,7 @@ use wodrow\yii2wtxtcrawler\site\Txt68;
 use wodrow\yii2wtxtcrawler\site\Xbqg;
 use wodrow\yii2wtxtcrawler\site\Xbqg6;
 use wodrow\yii2wtxtcrawler\site\XiaoShuoShuWang;
+use wodrow\yii2wtxtcrawler\site\YouShenXiaoShuoWang;
 use wodrow\yii2wtxtcrawler\wiki\Lgqm;
 use yii\base\Exception;
 
@@ -81,6 +83,8 @@ class TxtCrawler
             DuShuWang66::DOMAIN => DuShuWang66::class,
             LieWenWang::DOMAIN => LieWenWang::class,
             KanShuLa::DOMAIN => KanShuLa::class,
+            YouShenXiaoShuoWang::DOMAIN => YouShenXiaoShuoWang::class,
+            HuaWenZaiXian::DOMAIN => HuaWenZaiXian::class,
         ];
     }
 
