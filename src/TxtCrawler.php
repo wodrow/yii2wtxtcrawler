@@ -10,8 +10,10 @@ namespace wodrow\yii2wtxtcrawler;
 
 
 use wodrow\yii2wtxtcrawler\site\AiDouKanShu;
+use wodrow\yii2wtxtcrawler\site\Ba1XinZHongWen;
 use wodrow\yii2wtxtcrawler\site\BaBaiXiaoSHuoWang;
 use wodrow\yii2wtxtcrawler\site\BaLingDianZiShuo;
+use wodrow\yii2wtxtcrawler\site\BiQuDao;
 use wodrow\yii2wtxtcrawler\site\Biquger;
 use wodrow\yii2wtxtcrawler\site\Biquger001;
 use wodrow\yii2wtxtcrawler\site\BiQuGerXiaoShuo;
@@ -20,6 +22,7 @@ use wodrow\yii2wtxtcrawler\site\BiQuWo;
 use wodrow\yii2wtxtcrawler\site\BiXiaWenXue;
 use wodrow\yii2wtxtcrawler\site\Bqk;
 use wodrow\yii2wtxtcrawler\site\BqgInfo;
+use wodrow\yii2wtxtcrawler\site\CdzdgwBqg;
 use wodrow\yii2wtxtcrawler\site\Ddxs;
 use wodrow\yii2wtxtcrawler\site\DuShuWang66;
 use wodrow\yii2wtxtcrawler\site\HuaWenZaiXian;
@@ -85,6 +88,9 @@ class TxtCrawler
             KanShuLa::DOMAIN => KanShuLa::class,
             YouShenXiaoShuoWang::DOMAIN => YouShenXiaoShuoWang::class,
             HuaWenZaiXian::DOMAIN => HuaWenZaiXian::class,
+            CdzdgwBqg::DOMAIN => CdzdgwBqg::class,
+            Ba1XinZHongWen::DOMAIN => Ba1XinZHongWen::class,
+            BiQuDao::DOMAIN => BiQuDao::class,
         ];
     }
 
