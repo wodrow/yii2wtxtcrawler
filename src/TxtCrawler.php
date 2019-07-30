@@ -14,6 +14,7 @@ use wodrow\yii2wtxtcrawler\site\Ba1XinZHongWen;
 use wodrow\yii2wtxtcrawler\site\BaBaiXiaoSHuoWang;
 use wodrow\yii2wtxtcrawler\site\BaLingDianZiShuo;
 use wodrow\yii2wtxtcrawler\site\BiQuDao;
+use wodrow\yii2wtxtcrawler\site\BiQuGeCc;
 use wodrow\yii2wtxtcrawler\site\Biquger;
 use wodrow\yii2wtxtcrawler\site\Biquger001;
 use wodrow\yii2wtxtcrawler\site\BiQuGerXiaoShuo;
@@ -97,6 +98,7 @@ class TxtCrawler
             BiQuGeXiaoShuoWang::DOMAIN => BiQuGeXiaoShuoWang::class,
             BoQuGe::DOMAIN => BoQuGe::class,
             BiQuGuan::DOMAIN => BiQuGuan::class,
+            BiQuGeCc::DOMAIN => BiQuGeCc::class,
         ];
     }
 
