@@ -15,6 +15,7 @@ use wodrow\yii2wtxtcrawler\site\BaBaiXiaoSHuoWang;
 use wodrow\yii2wtxtcrawler\site\BaLingDianZiShuo;
 use wodrow\yii2wtxtcrawler\site\BiQuDao;
 use wodrow\yii2wtxtcrawler\site\BiQuGeCc;
+use wodrow\yii2wtxtcrawler\site\BiQuGeCm;
 use wodrow\yii2wtxtcrawler\site\Biquger;
 use wodrow\yii2wtxtcrawler\site\Biquger001;
 use wodrow\yii2wtxtcrawler\site\BiQuGerXiaoShuo;
@@ -22,12 +23,14 @@ use wodrow\yii2wtxtcrawler\site\BiQuGeXiaoShuoWang;
 use wodrow\yii2wtxtcrawler\site\BiQuGuan;
 use wodrow\yii2wtxtcrawler\site\BiQuKan;
 use wodrow\yii2wtxtcrawler\site\BiQuWo;
+use wodrow\yii2wtxtcrawler\site\BiQuYun;
 use wodrow\yii2wtxtcrawler\site\BiXiaWenXue;
 use wodrow\yii2wtxtcrawler\site\BoQuGe;
 use wodrow\yii2wtxtcrawler\site\Bqk;
 use wodrow\yii2wtxtcrawler\site\BqgInfo;
 use wodrow\yii2wtxtcrawler\site\CdzdgwBqg;
 use wodrow\yii2wtxtcrawler\site\Ddxs;
+use wodrow\yii2wtxtcrawler\site\DingDiann;
 use wodrow\yii2wtxtcrawler\site\DuShuWang66;
 use wodrow\yii2wtxtcrawler\site\HuaWenZaiXian;
 use wodrow\yii2wtxtcrawler\site\KanShuLa;
@@ -99,6 +102,9 @@ class TxtCrawler
             BoQuGe::DOMAIN => BoQuGe::class,
             BiQuGuan::DOMAIN => BiQuGuan::class,
             BiQuGeCc::DOMAIN => BiQuGeCc::class,
+            BiQuGeCm::DOMAIN => BiQuGeCm::class,
+            BiQuYun::DOMAIN => BiQuYun::class,
+            DingDiann::DOMAIN => DingDiann::class,
         ];
     }
 
