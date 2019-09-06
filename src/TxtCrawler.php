@@ -37,6 +37,7 @@ use wodrow\yii2wtxtcrawler\site\HuaWenZaiXian;
 use wodrow\yii2wtxtcrawler\site\KanShuLa;
 use wodrow\yii2wtxtcrawler\site\KBiQuGe;
 use wodrow\yii2wtxtcrawler\site\LieWenWang;
+use wodrow\yii2wtxtcrawler\site\PingYueGeCom;
 use wodrow\yii2wtxtcrawler\site\QuanBenXiaoShuoWang;
 use wodrow\yii2wtxtcrawler\site\QuanShuWang;
 use wodrow\yii2wtxtcrawler\site\QuanShuWang4;
@@ -109,6 +110,7 @@ class TxtCrawler
             DingDiann::DOMAIN => DingDiann::class,
             BookTxt::DOMAIN => BookTxt::class,
             XBiQuGeWCom::DOMAIN => XBiQuGeWCom::class,
+            PingYueGeCom::DOMAIN => PingYueGeCom::class,
         ];
     }
 
