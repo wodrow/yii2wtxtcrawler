@@ -44,6 +44,7 @@ use wodrow\yii2wtxtcrawler\site\QuanXiaoShuo;
 use wodrow\yii2wtxtcrawler\site\ThirdZm;
 use wodrow\yii2wtxtcrawler\site\TianTianZhongWen;
 use wodrow\yii2wtxtcrawler\site\Txt68;
+use wodrow\yii2wtxtcrawler\site\XBiQuGeWCom;
 use wodrow\yii2wtxtcrawler\site\Xbqg;
 use wodrow\yii2wtxtcrawler\site\Xbqg6;
 use wodrow\yii2wtxtcrawler\site\XiaoShuoShuWang;
@@ -107,6 +108,7 @@ class TxtCrawler
             BiQuYun::DOMAIN => BiQuYun::class,
             DingDiann::DOMAIN => DingDiann::class,
             BookTxt::DOMAIN => BookTxt::class,
+            XBiQuGeWCom::DOMAIN => XBiQuGeWCom::class,
         ];
     }
 
