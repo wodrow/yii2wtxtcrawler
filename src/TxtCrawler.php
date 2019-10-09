@@ -26,6 +26,7 @@ use wodrow\yii2wtxtcrawler\site\BiQuWo;
 use wodrow\yii2wtxtcrawler\site\BiQuYun;
 use wodrow\yii2wtxtcrawler\site\BiXiaWenXue;
 use wodrow\yii2wtxtcrawler\site\BookTxt;
+use wodrow\yii2wtxtcrawler\site\BookTxtCom;
 use wodrow\yii2wtxtcrawler\site\BoQuGe;
 use wodrow\yii2wtxtcrawler\site\Bqk;
 use wodrow\yii2wtxtcrawler\site\BqgInfo;
@@ -111,6 +112,7 @@ class TxtCrawler
             BookTxt::DOMAIN => BookTxt::class,
             XBiQuGeWCom::DOMAIN => XBiQuGeWCom::class,
             PingYueGeCom::DOMAIN => PingYueGeCom::class,
+            BookTxtCom::DOMAIN => BookTxtCom::class,
         ];
     }
 
