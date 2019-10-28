@@ -15,7 +15,7 @@ class Lgqm extends Tc
 {
     const NAME = "临高启明wiki";
     const DOMAIN = "lgqm.huijiwiki.com";
-    const HOME_URL = "http://lgqm.huijiwiki.com/wiki/首页";
+    const HOME_URL = "http://".self::DOMAIN."/wiki/首页";
 
     /**
      * @return array|mixed
