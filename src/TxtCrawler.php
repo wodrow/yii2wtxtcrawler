@@ -19,6 +19,7 @@ use wodrow\yii2wtxtcrawler\site\BiQuGeCm;
 use wodrow\yii2wtxtcrawler\site\Biquger;
 use wodrow\yii2wtxtcrawler\site\Biquger001;
 use wodrow\yii2wtxtcrawler\site\BiQuGerXiaoShuo;
+use wodrow\yii2wtxtcrawler\site\WWWBiQuGeTw;
 use wodrow\yii2wtxtcrawler\site\BiQuGeXiaoShuoWang;
 use wodrow\yii2wtxtcrawler\site\BiQuGuan;
 use wodrow\yii2wtxtcrawler\site\BiQuKan;
@@ -113,6 +114,7 @@ class TxtCrawler
             XBiQuGeWCom::DOMAIN => XBiQuGeWCom::class,
             PingYueGeCom::DOMAIN => PingYueGeCom::class,
             BookTxtCom::DOMAIN => BookTxtCom::class,
+            WWWBiQuGeTw::DOMAIN => WWWBiQuGeTw::class,
         ];
     }
 
