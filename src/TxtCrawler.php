@@ -19,6 +19,7 @@ use wodrow\yii2wtxtcrawler\site\BiQuGeCm;
 use wodrow\yii2wtxtcrawler\site\Biquger;
 use wodrow\yii2wtxtcrawler\site\Biquger001;
 use wodrow\yii2wtxtcrawler\site\BiQuGerXiaoShuo;
+use wodrow\yii2wtxtcrawler\site\Www_8jzwCom;
 use wodrow\yii2wtxtcrawler\site\WWWBiQuGeTw;
 use wodrow\yii2wtxtcrawler\site\BiQuGeXiaoShuoWang;
 use wodrow\yii2wtxtcrawler\site\BiQuGuan;
@@ -49,6 +50,7 @@ use wodrow\yii2wtxtcrawler\site\TianTianZhongWen;
 use wodrow\yii2wtxtcrawler\site\Txt68;
 use wodrow\yii2wtxtcrawler\site\WWWBiqusaCom;
 use wodrow\yii2wtxtcrawler\site\WWWBisogeCom;
+use wodrow\yii2wtxtcrawler\site\WwwTongshuNet;
 use wodrow\yii2wtxtcrawler\site\XBiQuGeWCom;
 use wodrow\yii2wtxtcrawler\site\Xbqg;
 use wodrow\yii2wtxtcrawler\site\Xbqg6;
@@ -119,6 +121,8 @@ class TxtCrawler
             WWWBiQuGeTw::DOMAIN => WWWBiQuGeTw::class,
             WWWBisogeCom::DOMAIN => WWWBisogeCom::class,
             WWWBiqusaCom::DOMAIN => WWWBiqusaCom::class,
+            Www_8jzwCom::DOMAIN => Www_8jzwCom::class,
+            WwwTongshuNet::DOMAIN => WwwTongshuNet::class,
         ];
     }
 
