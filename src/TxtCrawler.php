@@ -20,6 +20,8 @@ use wodrow\yii2wtxtcrawler\site\Biquger;
 use wodrow\yii2wtxtcrawler\site\Biquger001;
 use wodrow\yii2wtxtcrawler\site\BiQuGerXiaoShuo;
 use wodrow\yii2wtxtcrawler\site\Www_8jzwCom;
+use wodrow\yii2wtxtcrawler\site\WwwAikantxtLa;
+use wodrow\yii2wtxtcrawler\site\WwwBiquge9Cc;
 use wodrow\yii2wtxtcrawler\site\WWWBiQuGeTw;
 use wodrow\yii2wtxtcrawler\site\BiQuGeXiaoShuoWang;
 use wodrow\yii2wtxtcrawler\site\BiQuGuan;
@@ -125,6 +127,8 @@ class TxtCrawler
             Www_8jzwCom::DOMAIN => Www_8jzwCom::class,
             WwwTongshuNet::DOMAIN => WwwTongshuNet::class,
             WwwLvsetxtCom::DOMAIN => WwwLvsetxtCom::class,
+            WwwAikantxtLa::DOMAIN => WwwAikantxtLa::class,
+            WwwBiquge9Cc::DOMAIN => WwwBiquge9Cc::class,
         ];
     }
 
