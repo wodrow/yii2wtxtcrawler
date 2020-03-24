@@ -50,6 +50,7 @@ use wodrow\yii2wtxtcrawler\site\TianTianZhongWen;
 use wodrow\yii2wtxtcrawler\site\Txt68;
 use wodrow\yii2wtxtcrawler\site\WWWBiqusaCom;
 use wodrow\yii2wtxtcrawler\site\WWWBisogeCom;
+use wodrow\yii2wtxtcrawler\site\WwwLvsetxtCom;
 use wodrow\yii2wtxtcrawler\site\WwwTongshuNet;
 use wodrow\yii2wtxtcrawler\site\XBiQuGeWCom;
 use wodrow\yii2wtxtcrawler\site\Xbqg;
@@ -123,6 +124,7 @@ class TxtCrawler
             WWWBiqusaCom::DOMAIN => WWWBiqusaCom::class,
             Www_8jzwCom::DOMAIN => Www_8jzwCom::class,
             WwwTongshuNet::DOMAIN => WwwTongshuNet::class,
+            WwwLvsetxtCom::DOMAIN => WwwLvsetxtCom::class,
         ];
     }
 

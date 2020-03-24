@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Wodro
- * Date: 2020/3/18
- * Time: 19:32
+ * Date: 2020/3/24
+ * Time: 18:11
  */
 
 namespace wodrow\yii2wtxtcrawler\site;
@@ -11,11 +11,15 @@ namespace wodrow\yii2wtxtcrawler\site;
 
 use wodrow\yii2wtxtcrawler\Tc;
 
-class WwwTongshuNet extends Tc
+class WwwLvsetxtCom extends Tc
 {
-    const NAME = "www.tongshu.net";
-    const DOMAIN = "www.tongshu.net";
+    const DOMAIN = "www.lvsetxt.com";
+    const NAME = self::DOMAIN;
     const HOME_URL = "https://".self::DOMAIN;
+
+//    protected $_ls = '#list dd a';
+    protected $_ls = '.listmain dd a';
+    protected $_content = '#content';
 
     public function crawler()
     {
@@ -23,7 +27,7 @@ class WwwTongshuNet extends Tc
         $_uri = str_replace(self::HOME_URL, '', $this->url);
         $this->title = $this->ql->find('title')->text();
         if ($this->show_log)var_dump($this->title);
-        $ls = '#list dd a';
+        $ls = $this->_ls;
         $list = $this->ql->rules([
             'title' => [$ls, 'text'],
             'href' => [$ls, 'href'],
@@ -35,7 +39,7 @@ class WwwTongshuNet extends Tc
             $this->content .= $title."\r\n\n";
             $href = $v['href'];
             $href = str_replace($_uri, '', $href);
-            $this->getContentByUrl($this->url.$href);
+            $this->getContentByUrl(self::HOME_URL.$href);
             if ($this->show_log){
                 var_dump($title);
             }
@@ -49,7 +53,7 @@ class WwwTongshuNet extends Tc
     protected function getContentByUrl($url)
     {
         $this->ql->get($url);
-        $eles = $this->ql->find('#content');
+        $eles = $this->ql->find($this->_content);
         $text = $eles->text();
         if ($text == ""){
             $this->getContentByUrl($url);
