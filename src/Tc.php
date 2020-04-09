@@ -18,7 +18,7 @@ abstract class Tc extends Component implements Api
     public $url;
     public $title;
     public $content = "";
-    public $phantomjs;
+    public $phantomjsBinPath;
 
     public $t_dir;
     public $show_log;
@@ -34,7 +34,9 @@ abstract class Tc extends Component implements Api
     public function init()
     {
         parent::init();
-        $this->ql = Ql::getQl();
+        $ql = new Ql();
+        $ql->phantomjsBinPath = $this->phantomjsBinPath;
+        $this->ql = $ql->ql;
     }
 
     /**
